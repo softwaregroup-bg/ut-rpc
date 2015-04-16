@@ -1,0 +1,25 @@
+{
+  "name": "ut-rpc",
+  "version": "5.0.0",
+  "description": "UT RPC module",
+  "main": "index.js",
+  "dependencies":{
+    "mux-demux": "~3.7.9",
+    "through2": "~1.1.1"
+  },
+  "publishConfig": {
+    "registry": "http://npm.softwaregroup-bg.com:5001"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.softwaregroup-bg.com:ut5/ut-rpc.git"
+  },
+  "keywords": [
+    "rpc"
+  ],
+  "author": "",
+  "license": "ISC"
+}
