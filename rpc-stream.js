@@ -49,16 +49,21 @@ module.exports = function (obj, opts) {
 
         if(name != null) {
             var called = 0
-            args.push(function () {
-                if (called++) return
-                var args = [].slice.call(arguments)
-                args[0] = flattenError(args[0])
-                if(~i) callback(undefined, [args, i]) //responses don't have a name.
-            });
+            var self = this
             try {
-                local[name].apply(obj, args)
-            } catch (err) {
-                if(~i) callback(undefined, [[flattenError(err)], i])
+                args.push(function () {
+                    if (called++) return
+                    var args = [].slice.call(arguments)
+                    args[0] = flattenError(args[0])
+                    if (~i) self.push([args, i]) //responses don't have a name.
+                });
+                try {
+                    local[name].apply(obj, args)
+                } catch (err) {
+                    if (~i) self.push([[flattenError(err)], i])
+                }
+            } finally {
+                callback()
             }
         } else if(!cbs[i]) {
             //there is no callback with that id.
@@ -75,7 +80,7 @@ module.exports = function (obj, opts) {
             try {
                 cb.apply(null, args);
             } finally {
-                callback(undefined);
+                callback();
             }
         }
     })
