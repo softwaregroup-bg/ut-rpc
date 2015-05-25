@@ -6,6 +6,15 @@ function server(methods, isServer) {
     var mdm = MuxDemux({error: true});
 
     mdm.createLocalCall = rpcs.createLocalCall.bind(rpcs);
+    mdm.createRemote = function createRemote(name, type){
+        if(type == 'req') {
+            return rpcs.createRemoteCall(name);
+        } else if(type == 'pub') {
+            return rpcs.createRemoteCall(name);  //todo handle pub/sub
+        } else {
+            return createRemoteStream(name, type);
+        }
+    }
 
     function genManifest(methods) {
         var manifest = {};
@@ -16,7 +25,7 @@ function server(methods, isServer) {
     }
 
     mdm.on('connection', function(con) {
-        con.on('error', function() {});
+        con.on('error', function(e) {console.log(e)});
 
         if(con.meta == 'rpc') {
             if (isServer){
@@ -44,7 +53,7 @@ function server(methods, isServer) {
     });
 
     var rpcStream = mdm.createStream('rpc');
-    rpcStream.on('error', function() {});
+    rpcStream.on('error', function(e) {console.log(e)});
     if (!isServer) {
         rpcs.pipe(rpcStream).pipe(rpcs);
     }
@@ -83,15 +92,6 @@ function server(methods, isServer) {
                 methods[name] = rpcs.createRemoteCall(name);
             } else {
                 methods[name] = createRemoteStream(name, manifest[name]);
-            }
-        }
-        methods.createRemote = function createRemote(name, type){
-            if(type == 'req') {
-                return rpcs.createRemoteCall(name);
-            } else if(type == 'pub') {
-                return rpcs.createRemoteCall(name);  //todo handle pub/sub
-            } else {
-                return createRemoteStream(name, type);
             }
         }
         mdm.emit('remote', methods);
