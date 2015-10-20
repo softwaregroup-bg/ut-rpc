@@ -1,9 +1,9 @@
 {
   "name": "ut-rpc",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "UT RPC module",
   "main": "index.js",
-  "dependencies":{
+  "dependencies": {
     "mux-demux": "~3.7.9",
     "through2": "~1.1.1"
   },
