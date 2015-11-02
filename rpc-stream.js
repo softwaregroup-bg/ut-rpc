@@ -51,7 +51,7 @@ module.exports = function (obj, opts) {
             var called = 0
             var self = this
             try {
-                args.push(function () {
+                ~i && args.push(function () {
                     if (called++) return
                     var args = [].slice.call(arguments)
                     args[0] = flattenError(args[0])
