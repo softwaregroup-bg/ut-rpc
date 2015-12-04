@@ -8,17 +8,19 @@ module.exports = function(obj, opts) {
     var nameSpace = (opts.id || 'rpc') + '-';
     var flattenError = opts.flattenError || function(err) {
         if (!(err instanceof Error)) { return err; }
-        var err2 = {message: err.message};
-        for (var k in err) {
+        var err2 = {message: err.message, stackInfo: err.stack.split('\n')};
+        Object.keys(err).forEach(function(k) {
             err2[k] = err[k];
-        }
+        });
         return err2;
     };
 
     function expandError(err) {
         if (!err || !err.message) { return err; }
         var err2 = new Error(err.message);
-        for (var k in err) { err2[k] = err[k]; }
+        Object.keys(err).forEach(function(k) {
+            err2[k] = err[k]; 
+        });
         return err2;
     }
 
