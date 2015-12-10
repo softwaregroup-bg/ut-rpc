@@ -19,7 +19,7 @@ module.exports = function(obj, opts) {
         if (!err || !err.message) { return err; }
         var err2 = new Error(err.message);
         Object.keys(err).forEach(function(k) {
-            err2[k] = err[k]; 
+            err2[k] = err[k];
         });
         return err2;
     }
