@@ -1,6 +1,6 @@
 {
   "name": "ut-rpc",
-  "version": "5.0.4",
+  "version": "5.0.5",
   "description": "UT RPC module",
   "main": "index.js",
   "dependencies": {
