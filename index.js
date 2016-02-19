@@ -3,7 +3,7 @@ var MuxDemux = require('mux-demux');
 
 function server(methods, isServer) {
     var rpcs = rpc(methods, {id: isServer ? 'bus' : 'port'});
-    var mdm = MuxDemux({error: true});
+    var mdm = MuxDemux({error: false});
 
     mdm.createLocalCall = rpcs.createLocalCall.bind(rpcs);
     mdm.createRemote = function createRemote(name, type) {
