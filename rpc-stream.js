@@ -16,7 +16,7 @@ module.exports = function(obj, opts) {
     };
 
     function expandError(err) {
-        if (!err || !err.message) { return err; }
+        if (!err || !err.stackInfo) { return err; }
         var err2 = new Error(err.message);
         Object.keys(err).forEach(function(k) {
             err2[k] = err[k];
