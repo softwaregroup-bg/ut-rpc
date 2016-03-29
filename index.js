@@ -1,7 +1,7 @@
 var rpc = require('./rpc-stream');
 var MuxDemux = require('mux-demux');
 
-function server(methods, isServer) {
+function server(methods, isServer, log) {
     var rpcs = rpc(methods, {id: isServer ? 'bus' : 'port'});
     var mdm = MuxDemux({error: false});
 
@@ -25,7 +25,7 @@ function server(methods, isServer) {
     }
 
     mdm.on('connection', function(con) {
-        con.on('error', function(e) { console.log(e); });
+        con.on('error', function(e) { log && log.error && log.error(e); });
 
         if (con.meta === 'rpc') {
             if (isServer) {
@@ -53,7 +53,7 @@ function server(methods, isServer) {
     });
 
     var rpcStream = mdm.createStream('rpc');
-    rpcStream.on('error', function(e) { console.log(e); });
+    rpcStream.on('error', function(e) { log && log.error && log.error(e); });
     if (!isServer) {
         rpcs.pipe(rpcStream).pipe(rpcs);
     }
@@ -94,8 +94,8 @@ function server(methods, isServer) {
     return mdm;
 }
 
-module.exports = function(obj, isServer) {
-    return server(obj, isServer);
+module.exports = function(obj, isServer, log) {
+    return server(obj, isServer, log);
 };
 
 module.exports.readable = function(fn, args) {
