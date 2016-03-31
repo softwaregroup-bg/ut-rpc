@@ -4,8 +4,8 @@
   "description": "UT RPC module",
   "main": "index.js",
   "dependencies": {
-    "mux-demux": "~3.7.9",
-    "through2": "~2.0.0"
+    "mux-demux": "3.7.9",
+    "through2": "2.0.1"
   },
   "devDependencies": {
     "ut-tools": "^5.3.1"
