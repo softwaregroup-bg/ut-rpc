@@ -1,3 +1,13 @@
+<a name="5.3.11"></a>
+## [5.3.11](https://git.softwaregroup-bg.com/ut5/ut-rpc/compare/v5.3.10...v5.3.11) (2016-04-15)
+
+
+### Features
+
+* add Gitlab-ci and Jenkins scripts ([9f2d0b3](https://git.softwaregroup-bg.com/ut5/ut-rpc/commit/9f2d0b3))
+
+
+
 <a name="5.3.10"></a>
 ## [5.3.10](https://git.softwaregroup-bg.com/ut5/ut-rpc/compare/v5.3.9...v5.3.10) (2016-03-31)
 
