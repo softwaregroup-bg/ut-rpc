@@ -8,10 +8,7 @@
     "through2": "2.0.1"
   },
   "devDependencies": {
-    "ut-tools": "^5.3.13"
-  },
-  "publishConfig": {
-    "registry": "https://nexus.softwaregroup-bg.com/repository/npm-internal"
+    "ut-tools": "^5.6.0"
   },
   "scripts": {
     "lint": "ut-lint .",
@@ -34,11 +31,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.softwaregroup-bg.com:ut5/ut-rpc.git"
+    "url": "git@github.com:softwaregroup-bg/ut-rpc.git"
   },
   "keywords": [
     "rpc"
   ],
   "author": "",
-  "license": "ISC"
+  "license": "Apache-2.0"
 }
