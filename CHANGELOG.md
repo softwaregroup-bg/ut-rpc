@@ -1,3 +1,13 @@
+<a name="5.3.12"></a>
+## [5.3.12](https://github.com/softwaregroup-bg/ut-rpc/compare/v5.3.11...v5.3.12) (2016-08-12)
+
+
+### Bug Fixes
+
+* publish to npm ([21454f9](https://github.com/softwaregroup-bg/ut-rpc/commit/21454f9))
+
+
+
 <a name="5.3.11"></a>
 ## [5.3.11](https://git.softwaregroup-bg.com/ut5/ut-rpc/compare/v5.3.10...v5.3.11) (2016-04-15)
 
