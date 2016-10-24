@@ -1,3 +1,8 @@
+<a name="5.3.14"></a>
+## [5.3.14](https://github.com/softwaregroup-bg/ut-rpc/compare/v5.3.13...v5.3.14) (2016-10-24)
+
+
+
 <a name="5.3.13"></a>
 ## [5.3.13](https://github.com/softwaregroup-bg/ut-rpc/compare/v5.3.12...v5.3.13) (2016-09-20)
 
