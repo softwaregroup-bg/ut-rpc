@@ -1,3 +1,13 @@
+<a name="5.3.15"></a>
+## [5.3.15](https://github.com/softwaregroup-bg/ut-rpc/compare/v5.3.14...v5.3.15) (2016-12-23)
+
+
+### Bug Fixes
+
+* update dependencies ([02e464c](https://github.com/softwaregroup-bg/ut-rpc/commit/02e464c))
+
+
+
 <a name="5.3.14"></a>
 ## [5.3.14](https://github.com/softwaregroup-bg/ut-rpc/compare/v5.3.13...v5.3.14) (2016-10-24)
 
