@@ -5,10 +5,10 @@
   "main": "index.js",
   "dependencies": {
     "mux-demux": "3.7.9",
-    "through2": "2.0.1"
+    "through2": "2.0.3"
   },
   "devDependencies": {
-    "ut-tools": "^5.6.0"
+    "ut-tools": "^5.11.1"
   },
   "scripts": {
     "lint": "ut-lint .",
