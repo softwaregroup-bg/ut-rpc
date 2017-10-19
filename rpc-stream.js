@@ -40,23 +40,20 @@ module.exports = function(obj, opts) {
         if (args[0]) { args[0] = expandError(args[0]); }
 
         if (name != null) {
-            var called = 0;
-            var self = this;
-            try {
-                ~i && args.push(function() {
-                    if (called++) { return; }
-                    var args = [].slice.call(arguments);
-                    args[0] = flattenError(args[0]);
-                    if (~i) { self.push([args, i]); } // responses don't have a name.
-                });
-                try {
-                    local[name].apply(obj, args);
-                } catch (err) {
-                    if (~i) { self.push([[flattenError(err)], i]); }
-                }
-            } finally {
-                callback();
-            }
+            Promise.resolve()
+                .then(() => local[name].apply(obj, args))
+                .then(result => {
+                    if (~i) {
+                        this.push([[null, result], i]);
+                    }
+                    return i;
+                }, error => {
+                    if (~i) {
+                        this.push([[flattenError(error)], i]);
+                    }
+                })
+                .catch(() => {}); // ignore secondary errors
+            callback();
         } else if (!cbs[i]) {
             // there is no callback with that id.
             // either one end mixed up the id or
