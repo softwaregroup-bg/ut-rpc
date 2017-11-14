@@ -8,7 +8,7 @@
     "through2": "2.0.3"
   },
   "devDependencies": {
-    "ut-tools": "^5.11.1"
+    "ut-tools": "^5.29.14"
   },
   "scripts": {
     "lint": "ut-lint .",
