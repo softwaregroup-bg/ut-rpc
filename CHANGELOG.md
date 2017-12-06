@@ -1,3 +1,18 @@
+<a name="6.0.0"></a>
+# [6.0.0](https://github.com/softwaregroup-bg/ut-rpc/compare/v5.3.15...v6.0.0) (2017-12-06)
+
+
+### Features
+
+* switch to promises ([dba3201](https://github.com/softwaregroup-bg/ut-rpc/commit/dba3201))
+
+
+### BREAKING CHANGES
+
+* can only register functions that return promises
+
+
+
 <a name="5.3.15"></a>
 ## [5.3.15](https://github.com/softwaregroup-bg/ut-rpc/compare/v5.3.14...v5.3.15) (2016-12-23)
 
