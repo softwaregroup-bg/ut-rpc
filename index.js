@@ -10,7 +10,7 @@ function server(methods, isServer, log) {
         if (type === 'req') {
             return rpcs.createRemoteCall(name);
         } else if (type === 'pub') {
-            return rpcs.createRemoteCall(name);  // todo handle pub/sub
+            return rpcs.createRemoteCall(name); // todo handle pub/sub
         } else {
             return createRemoteStream(name, type);
         }
@@ -70,8 +70,8 @@ function server(methods, isServer, log) {
             var newStream = (
                 type === 'readable' ? mdm.createReadStream(streamArgs)
                     : type === 'writable' ? mdm.createWriteStream(streamArgs)
-                    : type === 'duplex' ? mdm.createStream(streamArgs)
-                    : (function() { throw new Error('unknown stream type: ' + type); })()
+                        : type === 'duplex' ? mdm.createStream(streamArgs)
+                            : (function() { throw new Error('unknown stream type: ' + type); })()
             );
             newStream.autoDestroy = false;
 
