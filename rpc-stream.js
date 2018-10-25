@@ -61,7 +61,7 @@ module.exports = function(obj, opts) {
             // log this error, but don't throw.
             // this process shouldn't crash because another did wrong
 
-            callback('Invalid callback id:' + i);
+            callback(new Error('Invalid callback id:' + i));
         } else {
             // call the callback.
             var cb = cbs[i];

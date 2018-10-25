@@ -8,7 +8,7 @@
     "through2": "2.0.3"
   },
   "devDependencies": {
-    "ut-tools": "^5.29.14"
+    "ut-tools": "^6.3.4"
   },
   "scripts": {
     "lint": "ut-lint .",
@@ -20,6 +20,7 @@
     "postpublish": "ut-postpublish",
     "postversion": "ut-postversion",
     "precommit": "ut-precommit",
+    "precover": "ut-precover",
     "prepublish": "ut-prepublish",
     "prepush": "ut-prepush",
     "pretest": "ut-pretest",
