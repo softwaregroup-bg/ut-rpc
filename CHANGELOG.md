@@ -1,3 +1,14 @@
+# [6.1.0](https://github.com/softwaregroup-bg/ut-rpc/compare/v6.0.0...v6.1.0) (2019-02-02)
+
+
+### Bug Fixes
+
+* ignore package-lock ([d2670f4](https://github.com/softwaregroup-bg/ut-rpc/commit/d2670f4))
+* upgrade dependencies ([71e81d9](https://github.com/softwaregroup-bg/ut-rpc/commit/71e81d9))
+* upgrade ut-tools ([6af2947](https://github.com/softwaregroup-bg/ut-rpc/commit/6af2947))
+
+
+
 <a name="6.0.0"></a>
 # [6.0.0](https://github.com/softwaregroup-bg/ut-rpc/compare/v5.3.15...v6.0.0) (2017-12-06)
 
