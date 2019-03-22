@@ -8,6 +8,7 @@
     "through2": "2.0.3"
   },
   "devDependencies": {
+    "tap": "^12.6.0",
     "ut-tools": "^6.8.10"
   },
   "scripts": {
