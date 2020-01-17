@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "tap": "^12.6.0",
-    "ut-tools": "^6.8.10"
+    "ut-tools": "^6.30.5"
   },
   "scripts": {
     "lint": "ut-lint .",
