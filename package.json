@@ -8,8 +8,7 @@
     "through2": "2.0.3"
   },
   "devDependencies": {
-    "tap": "^16.2.0",
-    "ut-tools": "^6.30.5"
+    "tap": "^16.2.0"
   },
   "scripts": {
     "lint": "ut-lint .",
