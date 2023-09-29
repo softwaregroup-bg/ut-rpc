@@ -1,3 +1,7 @@
+## [6.1.3](https://github.com/softwaregroup-bg/ut-rpc/compare/v6.1.2...v6.1.3) (2023-09-29)
+
+
+
 ## [6.1.2](https://github.com/softwaregroup-bg/ut-rpc/compare/v6.1.1...v6.1.2) (2020-01-17)
 
 
