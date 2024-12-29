@@ -1,44 +1,14 @@
 {
-  "_from": "ut-rpc@^6.0.0",
-  "_id": "ut-rpc@6.1.4",
-  "_inBundle": false,
-  "_integrity": "sha512-x7n8Jo+SLXY0iMhrNlQFrX6Qe0rWGhy+8RHzh8cXqVvNL/VOe7IzB0MKDCHt88HiOaN5UpL4aUZ2iRyg5oLPQA==",
-  "_location": "/ut-rpc",
-  "_phantomChildren": {
-    "readable-stream": "2.3.8",
-    "xtend": "4.0.2"
-  },
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "ut-rpc@^6.0.0",
-    "name": "ut-rpc",
-    "escapedName": "ut-rpc",
-    "rawSpec": "^6.0.0",
-    "saveSpec": null,
-    "fetchSpec": "^6.0.0"
-  },
-  "_requiredBy": [
-    "/ut-bus",
-    "/ut-port-amqp/ut-bus"
-  ],
-  "_resolved": "https://nexus.softwaregroup.com/repository/npm-all/ut-rpc/-/ut-rpc-6.1.4.tgz",
-  "_shasum": "54ab4d3af6c0d03dbb8963a3f8c600896e4f98b3",
-  "_spec": "ut-rpc@^6.0.0",
-  "_where": "D:\\Professional\\Code\\OrangeTech\\impl-payjack\\node_modules\\ut-bus",
   "author": "",
   "bugs": {
     "url": "https://github.com/softwaregroup-bg/ut-rpc/issues"
   },
   "bundleDependencies": false,
   "dependencies": {
-    "mux-demux": "3.7.9",
-    "through2": "2.0.3"
   },
   "deprecated": false,
   "description": "UT RPC module",
   "devDependencies": {
-    "tap": "^16.2.0"
   },
   "homepage": "https://github.com/softwaregroup-bg/ut-rpc#readme",
   "keywords": [
